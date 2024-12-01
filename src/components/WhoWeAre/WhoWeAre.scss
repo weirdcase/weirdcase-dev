@@ -1,21 +1,21 @@
 .who-we-are-section-wrapper {
   .card-body {
     h2 {
-      color: rgba(103, 58, 183, 0.89);
+      color: $ascent-violet;
     }
     blockquote {
-      border-left: solid 8px rgba(103, 58, 183, 0.89);
+      border-left: solid 8px $ascent-violet;
       font-style: italic;
       margin: 15px 0;
       padding: 0.5em 0 0.5em 1em;
       max-width: 572px;
       p {
-        color: #a4a4a4;
+        color: $blockquote-quote;
         position: relative;
         margin: 0 0 1.6875em 0;
       }
       .text-right {
-        color: #a8a8a8;
+        color: $blockquote-cite;
         direction: rtl;
         &::after {
           content: " - ";
@@ -36,7 +36,7 @@
         padding: 7px 0;
         width: 33%;
         .feature-icon {
-          background-color: rgba(103, 58, 183, 0.89);
+          background-color: $ascent-violet;
           width: 30px;
           height: 30px;
           border-radius: 50%;
