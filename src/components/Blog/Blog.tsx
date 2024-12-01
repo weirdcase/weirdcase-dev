@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Blog.scss'
 import Accordion from '../Shared/Accordion'
 import BlogAccordionsList from '../../data/blog-accordions';
+import PageTitle from '../Shared/PageTitle';
 
 const Blog = () => {
   return (
@@ -9,9 +9,7 @@ const Blog = () => {
       <div className="container">
         <div className="blog-section container-fluid clearfix">
           <div className="card">
-            <div className="card-header primary-heading">
-              <FontAwesomeIcon icon={['far', 'newspaper']} /> Blogs and Articles
-            </div>
+            <PageTitle faPrefix='far' faClass='newspaper'>Blogs and Articles</PageTitle>
           </div>
           { Array.isArray(BlogAccordionsList) && BlogAccordionsList.map((accordion) => 
             <div key={accordion.idname}>

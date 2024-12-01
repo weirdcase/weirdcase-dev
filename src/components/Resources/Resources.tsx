@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "../Shared/Card";
 import ResourcesCardList from "../../data/resources-cards";
+import PageTitle from "../Shared/PageTitle";
 
 const Resources = () => {
   return (
@@ -8,9 +8,7 @@ const Resources = () => {
       <div className="container">
         <div className="resources-section container-fluid clearfix">
           <div className="card">
-            <div className="card-header primary-heading">
-              <FontAwesomeIcon icon={['fas', 'laptop-file']} /> Resources
-            </div>
+            <PageTitle faPrefix='fas' faClass='laptop-file'>Resources</PageTitle>
           </div>
           <div className="row row-cols-1 row-cols-md-3 g-4 mt-1">
             { Array.isArray(ResourcesCardList) && ResourcesCardList.map((item, index) => ( 
