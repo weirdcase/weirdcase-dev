@@ -1,15 +1,7 @@
 import { FC, PropsWithChildren } from 'react';
+import CardType from '../../types/CardType';
 
-type CardProps = {
-  header?: string;
-  title?: string;
-  imgsrc?: string;
-  imgalt?: string;
-  footer?: string;
-  visible?: boolean;
-};
-
-const Card: FC<PropsWithChildren<CardProps>> = ({
+const Card: FC<PropsWithChildren<CardType>> = ({
   children,
   header,
   imgsrc,
@@ -17,11 +9,12 @@ const Card: FC<PropsWithChildren<CardProps>> = ({
   title,
   footer,
   visible = true,
+  id,
 }) => {
   if (!visible) return null;
 
   return (
-    <div className="card dashboard-items">
+    <div className="card dashboard-items" key={ id }>
       { header && (<div className="card-header">{ header }</div>)}
       { imgsrc && (<img src={ imgsrc } className="card-img-top" alt={ imgalt } />)}
       <div className="card-body">

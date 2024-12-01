@@ -1,12 +1,7 @@
 import { FC, PropsWithChildren } from 'react';
+import AccordionType from '../../types/AccordionType';
 
-type AccordionProps = {
-  idname?: string;
-  btntext?: string;
-  visible?: boolean;
-};
-
-const Accordion: FC<PropsWithChildren<AccordionProps>> = ({
+const Accordion: FC<PropsWithChildren<AccordionType>> = ({
   idname,
   btntext,
   visible = true,
@@ -22,11 +17,11 @@ const Accordion: FC<PropsWithChildren<AccordionProps>> = ({
             { btntext }
           </button>
         </h2>
-        <div id={`collapse-${idname}`} className="accordion-collapse collapse" aria-labelledby={`heading-${idname}`} data-bs-parent={`accordion-${idname}`}>
+        <div id={`collapse-${idname}`} className="accordion-collapse collapse" aria-labelledby={`heading-${idname}`} data-bs-parent={`#accordion-${idname}`}>
           <div className="accordion-body">
-          <div className="card-text">
-            { children }
-          </div>
+            <div className="card-text">
+              { children }
+            </div>
           </div>
         </div>
       </div>
