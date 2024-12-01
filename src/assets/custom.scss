@@ -1,0 +1,114 @@
+// // Global styles
+
+.clearfix::before, 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// // Custom CSS starts here
+.weirdcase-app-wrapper {
+  @extend .montserrat;
+  min-height: 100vh;
+  position: relative;
+  line-height: 1.5;
+  font-size: 16px;
+  color: $text-color;
+  font-weight: 400;
+  .weirdcase-app-container {
+    .main-content {
+      padding-top: 20px;
+      padding-bottom: 80px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .content-left {
+      float: left;
+    }
+    .content-right {
+      float: right;
+    }
+    .btn {
+      font-size: $btn-text-size;
+      border-radius: $btn-border-radius;
+      &.active, &.show, &:first-child:active, &:focus, &:focus-within, &:hover {
+        border-radius: $btn-border-radius;
+      }
+    }
+    .btn-normal {
+      color: $btn-text-color;
+      background-color: $accent-primary;
+      border-color: $accent-primary;
+      border-radius: $btn-border-radius;
+      &.active, &.show, &:first-child:active, &:focus, &:focus-within, &:hover {
+        color: $btn-text-color;
+        background-color: $accent-secondary;
+        border-color: $accent-secondary;
+        border-radius: $btn-border-radius;
+      }
+    }
+    .brand {
+      font-family: "Newsreader", serif;
+      font-optical-sizing: auto;
+      color: $accent-primary;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1;
+      padding-top: 4px;
+      span {
+        color: $accent-secondary;
+        font-weight: 700;
+      }
+    }
+    .primary-heading {
+      font-weight: 700;
+      color: $primary-heading-color;
+    }
+    .secondary-heading {
+      font-weight: 600;
+      color: $secondary-heading-color;
+    }
+    .accordian-image {
+      margin-bottom: 1rem;
+    }
+    .card {
+      .card-title {
+        color: $accent-secondary;
+        font-weight: 500;
+      }
+      .card-header {
+        color: $accent-primary;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-weight: 600;
+      }
+    }
+    #navbarSupportedContent {
+      .navbar-nav {
+        .nav-link {
+          color: $accent-primary;
+          font-weight: 500;
+          &.active, &.show {
+            color: $accent-secondary;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    button.accordion-button {
+      @extend .card-header;
+      font-weight: 600;
+      color: $accent-secondary;
+      background-color: $header-gray;
+      box-shadow: none;
+      padding: 1rem;
+      &:not(.collapsed) {
+        color: $accent-secondary;
+        background-color: $header-gray;
+        box-shadow: none;
+      }
+    }
+  }
+}
